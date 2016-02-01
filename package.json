@@ -2,7 +2,7 @@
   "name": "redux-reducer-meld",
   "version": "0.0.0",
   "description": "A beforeReduce enhancer that can meld partial previous state and initial state",
-  "homepage": "github.com",
+  "homepage": "https://github.com/mclauia/redux-reducer-meld/blob/master/README.md",
   "author": {
     "name": "Ian McLaughlin",
     "email": "mclauia@gmail.com",
@@ -13,7 +13,6 @@
   ],
   "main": "dist/index.js",
   "scripts": {
-    "lint": "eslint src || true",
     "test": "gulp",
     "prebuild": "gulp",
     "build": "gulp prepublish",
@@ -80,6 +79,9 @@
       "no-console": 0
     }
   },
-  "repository": "mclauia/redux-reducer-meld",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mclauia/redux-reducer-meld.git"
+  },
   "license": "MIT"
 }
