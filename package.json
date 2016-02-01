@@ -1,0 +1,85 @@
+{
+  "name": "redux-reducer-meld",
+  "version": "0.0.0",
+  "description": "A beforeReduce enhancer that can meld partial previous state and initial state",
+  "homepage": "github.com",
+  "author": {
+    "name": "Ian McLaughlin",
+    "email": "mclauia@gmail.com",
+    "url": "mclauia.com"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "dist/index.js",
+  "scripts": {
+    "lint": "eslint src || true",
+    "test": "gulp",
+    "prebuild": "gulp",
+    "build": "gulp prepublish",
+    "postbuild": "npm link",
+    "preversion": "gulp",
+    "version": "gulp prepublish",
+    "postversion": "npm rebuild -g && echo 'git push && git push --tags && gulp clean'"
+  },
+  "keywords": [
+    "redux",
+    "reducer",
+    "state",
+    "enhancer",
+    "functional",
+    "hydration"
+  ],
+  "devDependencies": {
+    "babel-cli": "^6.4.5",
+    "babel-core": "^6.3.26",
+    "babel-eslint": "^5.0.0-beta6",
+    "babel-plugin-transform-dev": "^2.0.0",
+    "babel-preset-es2015": "^6.3.13",
+    "del": "^2.0.2",
+    "eslint-config-airbnb": "^4.0.0",
+    "eslint-plugin-babel": "^3.0.0",
+    "gulp": "^3.9.0",
+    "gulp-babel": "^6.0.0",
+    "gulp-eslint": "^1.0.0",
+    "gulp-exclude-gitignore": "^1.0.0",
+    "gulp-istanbul": "^0.10.3",
+    "gulp-mocha": "^2.0.0",
+    "gulp-nsp": "^2.1.0",
+    "gulp-plumber": "^1.0.0",
+    "isparta": "^4.0.0",
+    "lodash": "^4.1.0"
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ],
+    "plugins": [
+      "transform-dev"
+    ]
+  },
+  "eslintConfig": {
+    "extends": "airbnb/base",
+    "parser": "babel-eslint",
+    "env": {
+      "browser": true,
+      "node": true,
+      "mocha": true
+    },
+    "globals": {
+      "__DEV__": true
+    },
+    "rules": {
+      "max-len": [
+        2,
+        120
+      ],
+      "semi": 0,
+      "no-use-before-define": 0,
+      "prefer-template": 0,
+      "no-console": 0
+    }
+  },
+  "repository": "mclauia/redux-reducer-meld",
+  "license": "MIT"
+}
